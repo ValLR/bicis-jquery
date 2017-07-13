@@ -4,6 +4,8 @@ function validateForm(){
 	var lastName = $("#lastname").val();
 	var email = $("#input-email").val();
 	var password = $("#input-password").val();
+	var selectedValue = $("#mSelect").val();
+
 
 	if(/^[a-zA-Z()+$]/.test(name)===false){
 		return alert("Ingresa tu nombre");
@@ -19,6 +21,9 @@ function validateForm(){
 	}
 	else if(password === "123456" || password==="098765" || password === "password"){
 		return alert("Contraseña inválida, elige una distinta")
+	}
+	else if(selectedValue==="0"){
+		return alert("Por favor, elige una alternativa")
 	}
 	else{
 		return alert("gracias por registrarte")
